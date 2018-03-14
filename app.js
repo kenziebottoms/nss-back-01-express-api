@@ -3,14 +3,12 @@
 const express = require("express");
 require("dotenv").config();
 const app = express();
-const dirRoutes = require("./routes/directors");
-const movRoutes = require("./routes/movies");
+const router = require("./routes/index");
 
 console.log("Hello from express");
 
 // middleware stack
-app.use("/api/v1/directors", dirRoutes);
-app.use("/api/v1/movies", movRoutes);
+app.use("/api/v1", router);
 
 // TODO: universal error handler
 
