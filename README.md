@@ -14,7 +14,9 @@ npm start
 
 Each endpoint returns JSON.
 
-| endpoint     | results                         |
-| ------------ | ------------------------------- |
-| `/directors` | Get all directors.              |
-| `/movies`    | Get all movies.                 |
+| endpoint       | results                         |
+| -------------- | ------------------------------- |
+| `/directors`   | Get all directors.              |
+| `/directors/1` | Get director with ID 1.         |
+| `/movies`      | Get all movies.                 |
+| `/movies/1`    | Get movie with ID 1.            |
