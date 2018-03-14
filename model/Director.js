@@ -11,3 +11,14 @@ module.exports.getAll = () => {
         });
     });
 };
+
+module.exports.getById = id => {
+    return new Promise((resolve, reject) => {
+        db.all(`SELECT * FROM directors
+                WHERE dir_id = ${id}`,
+            (err, data) => {
+                if (err) return reject(err);
+                resolve(data);
+            });
+    });
+};
