@@ -34,3 +34,14 @@ module.exports.getById = id => {
             });
     });
 };
+
+module.exports.getByDirectorId = id => {
+    return new Promise((resolve, reject) => {
+        db.all(`SELECT * FROM movies
+                WHERE movies.director_id = ${id}`,
+            (err, data) => {
+                if (err) return reject(err);
+                resolve(data);
+            });
+    });
+};
