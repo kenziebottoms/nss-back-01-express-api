@@ -12,6 +12,9 @@ npm start
 
 ## Usage
 
+Each endpoint returns JSON.
+
 | endpoint     | results                         |
 | ------------ | ------------------------------- |
-| `/directors` | A JSON object of all directors. |
+| `/directors` | Get all directors.              |
+| `/movies`    | Get all movies.                 |
