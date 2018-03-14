@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "db:reset": "node db/build-db",
     "start": "nodemon app.js",
     "test": "mocha -R nyan --watch"
   },
