@@ -1,4 +1,4 @@
-## Read-only movie API using Express
+# Read-only movie API using Express
 
 ### Run locally
 
@@ -9,3 +9,9 @@ npm install
 npm run db:reset
 npm start
 ```
+
+## Usage
+
+| endpoint     | results                         |
+| ------------ | ------------------------------- |
+| `/directors` | A JSON object of all directors. |
