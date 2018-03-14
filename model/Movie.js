@@ -18,3 +18,19 @@ module.exports.getAll = () => {
             });
     });
 };
+
+module.exports.getById = id => {
+    return new Promise((resolve, reject) => {
+        db.all(`SELECT
+                    m.*,
+                    d.name
+                FROM movies m
+                JOIN
+                    directors d ON d.dir_id = m.movie_id
+                WHERE m.movie_id = ${id}`,
+            (err, data) => {
+                if (err) return reject(err);
+                resolve(data);
+            });
+    });
+};
