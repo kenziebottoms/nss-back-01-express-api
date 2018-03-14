@@ -1,12 +1,12 @@
 "use strict";
 
 const { Router } = require("express");
-const dirRouter = Router();
+const movRouter = Router();
 
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("./db/mediaStore.sqlite");
-const { getDirectors } = require("../ctrl/director");
+const { getMovies } = require("../ctrl/movies");
 
-dirRouter.get("/", getDirectors);
+movRouter.get("/", getMovies);
 
-module.exports = dirRouter;
+module.exports = movRouter;
