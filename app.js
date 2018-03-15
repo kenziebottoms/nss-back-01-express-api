@@ -5,12 +5,23 @@ require("dotenv").config();
 const app = express();
 const router = require("./routes/index");
 
-console.log("Hello from express");
-
 // middleware stack
 app.use("/api/v1", router);
 
-// TODO: universal error handler
+app.use((req, res, next) => {
+    res.status(404);
+    res.json({
+        message: "Page not found."
+    });
+});
+
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        message: "There was a problem:",
+        error: error.message
+    });
+});
 
 const port = process.env.PORT || 3000;
 
