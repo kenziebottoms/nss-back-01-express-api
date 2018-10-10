@@ -12,7 +12,7 @@ npm start
 
 ## Usage
 
-Each endpoint returns JSON.
+Each endpoint returns JSON. Prepend all endpoints with `/api/v1/`
 
 | endpoint              | results                         |
 | --------------------- | ------------------------------- |
